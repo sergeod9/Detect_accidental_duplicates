@@ -1,0 +1,24 @@
+'''
+This script Selects objects that have nearby origins to other objects, "near by" is determined using the value variable
+The purpose of this script is to easily remove any undesired accidental duplicates
+'''
+import bpy
+
+print("NEW")   
+from mathutils import Vector
+act = bpy.context.active_object
+sel = bpy.context.selected_objects
+value = 0.1
+margin = Vector((value,value,value))
+
+act_location = act.location
+print(act_location)
+print(act_location+margin)
+
+for s in sel:
+    if s != act:
+        if (s.location - act_location) > margin:
+            s.select = False 
+    print(s.location - act_location)
+act.select = False
+            
