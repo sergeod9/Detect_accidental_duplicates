@@ -7,4 +7,6 @@ This is how it works:
 3- Run the script
 4- Nearby objects to the active object will stay selected, while everything else including active object will be deselected.
 5- Now you have all the duplicates selected, you can delete them or move them to a different layer
-6- To modify the definition of (near by), meaning to increase or decrease the threshold of detection, change the value of the variable called (value) in line 11 of the script, you should use a float number.
+6- To modify the definition of (near by), meaning to increase or decrease the threshold of detection, change the value of the variable called (value) in line 11 of the script, you should use a float number.<br>
+
+Warning: Objects positions is determined by origin.
